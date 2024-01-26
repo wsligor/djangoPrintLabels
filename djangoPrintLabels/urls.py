@@ -16,10 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework import routers
+from rest_framework.routers import SimpleRouter
 
 from startPrintLabels import views
+from startPrintLabels.views import SKU_View
+
+router = SimpleRouter()
+router.register('api/skus', SKU_View)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index')
 ]
+urlpatterns += router.urls
+
