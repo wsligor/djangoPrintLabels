@@ -20,10 +20,10 @@ from rest_framework import routers
 from rest_framework.routers import SimpleRouter
 
 from startPrintLabels import views
-from startPrintLabels.views import SKU_View
+from startPrintLabels.views import SKUView
 
 router = SimpleRouter()
-router.register('api/skus', SKU_View)
+router.register('api/skus', SKUView)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

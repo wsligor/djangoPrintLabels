@@ -14,13 +14,13 @@ def index(request):
     return render(request, 'index.html', context={'SKU': skus})
 
 
-class SKU_View(ModelViewSet):
+class SKUView(ModelViewSet):
     queryset = SKU.objects.all()
     serializer_class = SKU_Serializer
 
 
 def sku_app(request):
-    skus = SKU.objects.all()
+    # skus = SKU.objects.all()
     # filter_codes = Codes.objects.filter(printed_out=True)
     # for code in all_codes:
     #     print(code)
