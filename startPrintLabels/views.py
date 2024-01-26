@@ -18,3 +18,10 @@ class SKU_View(ModelViewSet):
     queryset = SKU.objects.all()
     serializer_class = SKU_Serializer
 
+
+def sku_app(request):
+    skus = SKU.objects.all()
+    # filter_codes = Codes.objects.filter(printed_out=True)
+    # for code in all_codes:
+    #     print(code)
+    return render(request, 'main_app.html')

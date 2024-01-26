@@ -27,7 +27,8 @@ router.register('api/skus', SKU_View)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index')
+    path('', views.index, name='index'),
+    path('sku_app/', views.sku_app, name='sku_app')
 ]
 urlpatterns += router.urls
 
